@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "slack-assistant"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"
+langchain-huggingface = ">=0.1.2,<0.2.0"
+langchain = {extras = ["google-genai"], version = "^0.3.24"}
+langgraph = ">=0.3.34,<0.4.0"
+slack-bolt = ">=1.23.0,<2.0.0"
+slack-sdk = ">=3.35.0,<4.0.0"
+fastapi = ">=0.115.12,<0.116.0"
+uvicorn = ">=0.34.2,<0.35.0"
+faiss-cpu = ">=1.10.0,<2.0.0"
+openai = ">=1.76.0,<2.0.0"
+python-dotenv = ">=1.1.0,<2.0.0"
+sentence-transformers = ">=4.1.0,<5.0.0"
+transformers = ">=4.51.3,<5.0.0"
+langchain-community = ">=0.3.22,<0.4.0"
+torch = { version = "*", source = "torch_cu118" }
+torchvision = { version = "*", source = "torch_cu118" }
+torchaudio = { version = "*", source = "torch_cu118" }
+pymupdf = "^1.25.5"
+arxiv = "^2.2.0"
+fitz = "^0.0.1.dev2"
+duckduckgo-search = "^8.0.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "pypi"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "torch_cu118"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "supplemental"
+
